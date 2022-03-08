@@ -33,8 +33,11 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name === null ? "" : variables.name}</h1>
-          <h1>Lucy Boilett</h1>
+          <h1>${
+            variables.name === null || variables.lastname === null
+              ? ""
+              : variables.name + " " + variables.lastname
+          }</h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
@@ -46,7 +49,7 @@ function render(variables = {}) {
         </div>
     `;
 }
-
+console.log(window.variables);
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
