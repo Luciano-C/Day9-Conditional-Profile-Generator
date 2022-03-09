@@ -38,9 +38,7 @@ function render(variables = {}) {
               ? ""
               : variables.name + " " + variables.lastname
           }</h1>
-          <h1>${
-            variables.socialMediaPosition === "position-left" ? "OñeL" : "OñeR"
-          }</h1>
+
           <h2>${
             variables.role === "Web Developer"
               ? "Web Developer"
