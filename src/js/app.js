@@ -38,9 +38,16 @@ function render(variables = {}) {
               ? ""
               : variables.name + " " + variables.lastname
           }</h1>
+ /*          <h1>${
+   variables.socialMediaPosition === "position-left" ? "OñeL" : "OñeR"
+ }</h1> */
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
-          <ul class="position-right">
+          <ul class=${
+            variables.socialMediaPosition === "position-left"
+              ? "position-left"
+              : "position-right"
+          }>
             <li><a href=${
               variables.twitter === null ? "#" : variables.twitter
             }><i class="fab fa-twitter"></i></a></li>
