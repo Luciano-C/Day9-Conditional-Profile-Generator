@@ -46,27 +46,12 @@ function render(variables = {}) {
               ? "Technical Writter"
               : ""
           }</h2>
-          <h3>${
-            variables.city === "Miami"
-              ? "Miami"
-              : variables.city === "Munich"
-              ? "Munich"
-              : variables.city === "Caracas"
-              ? "Caracas"
-              : variables.city === "Toronto"
-              ? "Toronto"
-              : ""
-          }, ${
-    variables.country === "USA"
-      ? "USA"
-      : variables.country === "Germany"
-      ? "Germany"
-      : variables.country === "Venezuela"
-      ? "Venezuela"
-      : variables.country === "Canada"
-      ? "Canada"
-      : ""
+
+          <h3>${variables.city === null ? "city" : variables.city}, ${
+    variables.country === null ? "country" : variables.country
   }</h3>
+
+  
           <ul class=${
             variables.socialMediaPosition === "position-left"
               ? "position-left"
