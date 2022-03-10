@@ -37,15 +37,7 @@ function render(variables = {}) {
     variables.lastname === null ? "" : variables.lastname
   }</h1>
 
-          <h2>${
-            variables.role === "Web Developer"
-              ? "Web Developer"
-              : variables.role === "Floor Planner"
-              ? "Floor Planner"
-              : variables.role === "Technical Writter"
-              ? "Technical Writter"
-              : ""
-          }</h2>
+          <h2>${variables.role === null ? "role" : variables.role}</h2>
 
           <h3>${variables.city === null ? "city" : variables.city}, ${
     variables.country === null ? "country" : variables.country
